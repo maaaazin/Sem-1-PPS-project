@@ -1,2 +1,3 @@
-# Sem-1-PPS-project
-This is a repository for the PPS End Sem project of morse code
+# Morse Code Translator
+This is a simple morse code translator created in python which used dictionaries and for loops to encrypt a plane text message into morse code.
+Similarly, it can also decrypt the given morse code input to plain english text too
