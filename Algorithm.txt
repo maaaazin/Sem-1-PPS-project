@@ -1,0 +1,16 @@
+Start
+Enter Choice
+If choice 1, go to 6
+If chioce 2, go to 11
+If choice 3, go to 16
+Take english text as input
+Convert all the characters to uppercase
+Assign the morse code for each character to the input text
+Print the morse code
+Go to 2
+Take morse code as input
+Store each character in a list
+Assign the English alphabet for each morse code character
+Print the English text
+Go to 2
+Stop
