@@ -13,4 +13,4 @@ Store each character in a list
 Assign the English alphabet for each morse code character
 Print the English text
 Go to 2
-Stop
+End
