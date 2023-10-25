@@ -1,5 +1,5 @@
 
-#------------------------------------------Defining the ditionary to store the morse code-----------------------------------------------------------------
+# Defining the ditionary to store the morse code
 
 morse_dict = {
     'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.', 'F': '..-.', 'G': '--.', 'H': '....',
@@ -12,11 +12,8 @@ morse_dict = {
     '$': '...-..-', '@': '.--.-.', ' ': '/'
 }
 
-#-----------------------------------------------------------------------------------------------------------------
 
-
-
-#-----------------------------------------Defining a function to convert the given message to morse code----------------------------------------------------------------
+# Defining a function to convert the given message to morse code
 
 def to_morse_code(message):
     morse_code = ''
@@ -25,11 +22,8 @@ def to_morse_code(message):
             morse_code += morse_dict[char] + ' '
     return morse_code
   
-#---------------------------------------------------------------------------------------------------------
 
-
-
-# ---------------Defining a function to convert morse code to text--------------------------------------
+# Defining a function to convert morse code to text
 
 def from_morse_code(morse_code):
         
@@ -40,12 +34,10 @@ def from_morse_code(morse_code):
             if morse == code:
                 message += char
     return message
-#-------------------------------------------------------------------------------------------------------
-
 
 
 # Defining the main function
-#---------------------------------------------------------------------------------------------------------------------
+
 def main():
     while True:
         choice = input("Choose an option:\nPress 1 to convert text to Morse code\nPress 2 to convert Morse code to text\nPress -1 to quit\n")
@@ -65,10 +57,9 @@ def main():
             
         else:
             print("Invalid choice, please choose from the available options.")
-#------------------------------------------------------------------------------------------------------------------
 
-#Calling out the main finction 
 
+# Calling out the main finction 
 
 if __name__ == "__main__":
     main()
