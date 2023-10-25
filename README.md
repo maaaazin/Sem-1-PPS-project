@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Morse Code Translator</title>
-</head>
 <body>
   <h1>Morse Code Translator</h1>
   
