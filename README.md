@@ -9,7 +9,6 @@
   <ul>
     <li>Text to Morse code translation</li>
     <li>Morse code to text translation</li>
-    <li>Supports letters, numbers, and common punctuation</li>
   </ul>
   
   <h2>Getting Started</h2>
