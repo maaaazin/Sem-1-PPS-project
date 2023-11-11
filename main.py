@@ -1,5 +1,4 @@
-
-# Defining the ditionary to store the morse code
+import streamlit as st
 
 morse_dict = {
     'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.', 'F': '..-.', 'G': '--.', 'H': '....',
@@ -13,20 +12,14 @@ morse_dict = {
 }
 
 
-# Defining a function to convert the given message to morse code
-
 def to_morse_code(message):
     morse_code = ''
     for char in message.upper():
         if char in morse_dict:
             morse_code += morse_dict[char] + ' '
     return morse_code
-  
-
-# Defining a function to convert morse code to text
 
 def from_morse_code(morse_code):
-        
     message = ''
     morse_code = morse_code.split(' ')
     for code in morse_code:
@@ -35,31 +28,23 @@ def from_morse_code(morse_code):
                 message += char
     return message
 
-
-# Defining the main function
-
 def main():
-    while True:
-        choice = input("Choose an option:\nPress 1 to convert text to Morse code\nPress 2 to convert Morse code to text\nPress -1 to quit\n")
-        if choice == '1':
-            message = input("Enter a message to convert to Morse code: ")
+    st.title("Morse Code Converter")
+
+    option = st.selectbox("Choose an option:", ["Convert text to Morse code", "Convert Morse code to text"])
+
+    if option == "Convert text to Morse code":
+        message = st.text_input("Enter a message to convert to Morse code:")
+        if st.button("Convert"):
             morse_code = to_morse_code(message)
-            print(morse_code)
-        
-        elif choice == '2':
-            morse_code = input("Enter a Morse code sequence to convert to text: ")
+            st.write("Morse Code:", morse_code)
+
+    elif option == "Convert Morse code to text":
+        morse_code = st.text_input("Enter a Morse code sequence to convert to text:")
+        if st.button("Convert"):
             message = from_morse_code(morse_code)
-            print(message)
-        
-        elif choice == '-1':
-            print("Quitted successfully")
-            break
-            
-        else:
-            print("Invalid choice, please choose from the available options.")
+            st.write("Text:", message)
 
-
-# Calling out the main finction 
 
 if __name__ == "__main__":
     main()
